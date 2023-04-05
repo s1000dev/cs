@@ -29,8 +29,6 @@ namespace MechWarrior
 				isWorking = true;
 				Console.WriteLine("Игра началась!");
 				Console.WriteLine("Чтобы переключить режим оружия, нажмите t");
-				Console.WriteLine("Чтобы перезарядить оружие, нажмите r");
-				Console.WriteLine("Игра началась!");
 			}
 			else
 			{
@@ -264,9 +262,7 @@ namespace MechWarrior
 		}
 		void ChangeType()
 		{
-			Console.WriteLine(isSingle);
 			isSingle = !isSingle;
-			Console.WriteLine(isSingle);
 		}
 	}
 
