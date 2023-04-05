@@ -18,8 +18,8 @@ namespace MechWarrior
 			// описать слоты меха
 			IWeapon[] slots = {
 				new MachineGun(),
-								new MissileLauncher(),
-								new AK()
+				new MissileLauncher(),
+				new AK()
 			};
 			// описать игровой цикол
 			Console.WriteLine("Для продолжения нажмите Enter");
@@ -74,13 +74,19 @@ namespace MechWarrior
 					{
 						Console.WriteLine("Вы выбрали одиночный режим стрельбы.");
 						isSingleShoot = true;
-						slots[currentSlot].ChangeType();
+						for (int i = 0; i < slots.Length; i++)
+						{
+							slots[i].ChangeType();
+						}
 					}
 					else
 					{
 						Console.WriteLine("Вы выбрали автоматический режим стрельбы.");
 						isSingleShoot = false;
-						slots[currentSlot].ChangeType();
+						for (int i = 0; i < slots.Length; i++)
+						{
+							slots[i].ChangeType();
+						}
 					}
 				}
 			}
